@@ -15,7 +15,5 @@ export default {
 </script>
 
 <template>
-  <div @click="handleClick">
-    <wwLayout path="slot" />
-  </div>
+  <wwLayout @click="handleClick" path="slot" />
 </template>
