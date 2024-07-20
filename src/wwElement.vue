@@ -2,13 +2,13 @@
 export default {
   inject: ["activeTabProvided", "setActiveTab"],
   props: {
-    name: {
-      type: String,
-    },
+    content: { type: Object, required: true },
+    wwFrontState: { type: Object, required: true },
+    wwEditorState: { type: Object, required: true },
   },
   methods: {
     handleClick() {
-      this.setActiveTab(this.name);
+      this.setActiveTab(this.content.name);
     },
   },
 };
