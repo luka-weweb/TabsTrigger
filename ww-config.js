@@ -13,5 +13,12 @@ export default {
       bindable: true,
       defaultValue: "",
     },
+    slot: {
+      hidden: true,
+      defaultValue: [],
+      navigator: {
+        group: "Dropdown",
+      },
+    },
   },
 };
