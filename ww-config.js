@@ -5,7 +5,7 @@ export default {
     },
   },
   properties: {
-    value: {
+    name: {
       label: {
         en: "Name",
       },
