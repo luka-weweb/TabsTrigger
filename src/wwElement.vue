@@ -1,27 +1,21 @@
 <script>
-import { computed } from "vue";
 export default {
-  data() {
-    return {
-      activeTab: "tab1",
-    };
-  },
-  provide() {
-    return {
-      activeTabProvided: computed(() => this.activeTab),
-      setActiveTab: this.setActiveTab,
-    };
+  inject: ["activeTabProvided", "setActiveTab"],
+  props: {
+    name: {
+      type: String,
+    },
   },
   methods: {
-    setActiveTab(tabId) {
-      this.activeTab = tabId;
+    handleClick() {
+      this.setActiveTab(this.name);
     },
   },
 };
 </script>
 
 <template>
-  <div>
+  <div @click="handleClick">
     <slot></slot>
   </div>
 </template>
