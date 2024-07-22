@@ -16,9 +16,6 @@ export default {
     slot: {
       hidden: true,
       defaultValue: [],
-      navigator: {
-        group: "Dropdown",
-      },
     },
   },
 };
