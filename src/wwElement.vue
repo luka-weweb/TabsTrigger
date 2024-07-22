@@ -10,10 +10,22 @@ export default {
     handleClick() {
       this.setActiveTab(this.content.name);
     },
+    handleFocus() {
+      if (this.content.acivation === "automatic") {
+        this.setActiveTab(this.content.name);
+      }
+    },
   },
 };
 </script>
 
 <template>
-  <wwLayout @click="handleClick" path="slot" />
+  <button
+    role="tab"
+    :aria-selected="isSelected ? 'true' : 'false'"
+    @click="handleClick"
+    @focus="handleFocus"
+  >
+    <wwLayout path="slot" />
+  </button>
 </template>
