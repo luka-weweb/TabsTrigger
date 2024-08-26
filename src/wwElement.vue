@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     handleFocus() {
-      if (this.content.activation === "automatic") {
+      if (this.content.activation === "auto") {
         this.setActiveTab(this.content.name);
       }
     },
