@@ -3,6 +3,7 @@ export default {
     label: {
       en: "My Element",
     },
+    icon: "view-grid",
   },
   properties: {
     name: {
