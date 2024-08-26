@@ -20,12 +20,14 @@ export default {
 </script>
 
 <template>
-  <button
-    role="tab"
-    :aria-selected="isSelected ? 'true' : 'false'"
-    @click="handleClick"
-    @focus="handleFocus"
-  >
-    <wwLayout path="slot" />
-  </button>
+  <wwLayoutItemContext is-repeat :data="{ aaa: 'blabla' }">
+    <button
+      role="tab"
+      :aria-selected="isSelected ? 'true' : 'false'"
+      @click="handleClick"
+      @focus="handleFocus"
+    >
+      <wwLayout path="slot" />
+    </button>
+  </wwLayoutItemContext>
 </template>
