@@ -20,14 +20,19 @@ export default {
 </script>
 
 <template>
-  <wwLayoutItemContext is-repeat :data="{ aaa: 'blabla' }">
-    <button
-      role="tab"
-      :aria-selected="isSelected ? 'true' : 'false'"
-      @click="handleClick"
-      @focus="handleFocus"
+  <button
+    role="tab"
+    :aria-selected="isSelected ? 'true' : 'false'"
+    @click="handleClick"
+    @focus="handleFocus"
+  >
+    <wwLayoutItemContext
+      :index="index"
+      :item="{}"
+      is-repeat
+      :data="{ active: activeTabProvided == this.content.name }"
     >
       <wwLayout path="slot" />
-    </button>
-  </wwLayoutItemContext>
+    </wwLayoutItemContext>
+  </button>
 </template>
