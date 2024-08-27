@@ -31,7 +31,7 @@ export default {
     @click="setActiveTab(content.name)"
     @focus="handleFocus"
   >
-    <wwLayoutItemContext is-repeat :data="{ active: isSelected }">
+    <wwLayoutItemContext is-repeat :index="1" :data="{ active: isSelected }">
       <wwLayout path="slot" />
     </wwLayoutItemContext>
   </button>
