@@ -25,14 +25,13 @@ export default {
 </script>
 
 <template>
-  <button
-    role="tab"
-    :aria-selected="isSelected"
-    @click="setActiveTab(content.name)"
-    @focus="handleFocus"
-  >
-    <wwLayoutItemContext is-repeat :index="1" :data="{ active: isSelected }">
-      <wwLayout path="slot" />
-    </wwLayoutItemContext>
-  </button>
+  <wwLayoutItemContext is-repeat :index="1" :data="{ active: isSelected }">
+    <button
+      role="tab"
+      :aria-selected="isSelected"
+      @click="setActiveTab(content.name)"
+      @focus="handleFocus"
+    ></button>
+    <wwLayout path="slot" />
+  </wwLayoutItemContext>
 </template>
