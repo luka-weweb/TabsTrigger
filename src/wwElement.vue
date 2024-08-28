@@ -31,7 +31,8 @@ export default {
       :aria-selected="isSelected"
       @click="setActiveTab(content.name)"
       @focus="handleFocus"
-    ></button>
-    <wwLayout path="slot" />
+    >
+      <wwLayout path="slot" />
+    </button>
   </wwLayoutItemContext>
 </template>
