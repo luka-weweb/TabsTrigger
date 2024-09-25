@@ -1,5 +1,6 @@
 <script>
 export default {
+  inheritAttrs: false,
   inject: ["activeTabProvided", "setActiveTab", "registerTabTrigger"],
   props: {
     content: { type: Object, required: true },
@@ -32,7 +33,7 @@ export default {
       @click="setActiveTab(content.name)"
       @focus="handleFocus"
     >
-      <wwLayout path="slot" />
+      <wwLayout v-bind="$attrs" path="slot" />
     </button>
   </wwLayoutItemContext>
 </template>
