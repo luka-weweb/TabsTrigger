@@ -5,6 +5,13 @@ export default {
     },
     icon: "view-grid",
   },
+  inherit: {
+    type: "ww-layout",
+  },
+  options: {
+    autoByContent: true,
+    displayAllowedValues: ["flex", "grid"],
+  },
   properties: {
     name: {
       label: {
