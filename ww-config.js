@@ -1,7 +1,7 @@
 export default {
   editor: {
     label: {
-      en: "My Element",
+      en: "Trigger",
     },
     icon: "view-grid",
   },
