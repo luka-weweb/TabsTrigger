@@ -21,18 +21,6 @@ export default {
       bindable: true,
       defaultValue: "",
     },
-    activation: {
-      label: "Appearance",
-      type: "TextSelect",
-      options: {
-        options: [
-          { label: "Automatic", value: "auto", default: true },
-          { label: "Manual", value: "manual" },
-        ],
-      },
-      bindable: true,
-      defaultValue: "",
-    },
     slot: {
       hidden: true,
       defaultValue: [],

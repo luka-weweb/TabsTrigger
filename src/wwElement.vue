@@ -1,7 +1,12 @@
 <script>
 export default {
   inheritAttrs: false,
-  inject: ["activeTabProvided", "setActiveTab", "registerTabTrigger"],
+  inject: [
+    "activeTabProvided",
+    "setActiveTab",
+    "registerTabTrigger",
+    "activationMode",
+  ],
   props: {
     content: { type: Object, required: true },
     wwFrontState: { type: Object, required: true },
@@ -14,7 +19,7 @@ export default {
   },
   methods: {
     handleFocus() {
-      if (this.content.activation === "auto") {
+      if (this.activationMode === "auto") {
         this.setActiveTab(this.content.name);
       }
     },
